@@ -14,7 +14,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('train', function (Blueprint $table) {
+        Schema::create('trains', function (Blueprint $table) {
             $table->id();
             // Azienda
             // Stazione di partenza
@@ -31,7 +31,7 @@ return new class extends Migration
             $table->dateTime('orario_di_partenza');
             $table->dateTime('orario_di_arrivo');
             $table->smallInteger('codice_treno');
-            $table->smallInteger('numero_carrozza');
+            $table->smallInteger('numero_carrozza')->nullable();
             $table->boolean('in_orario')->unsigned()->default(1);
             $table->boolean('cancellato')->unsigned()->default(1);
             $table->timestamps();
