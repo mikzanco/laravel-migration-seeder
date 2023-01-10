@@ -17,7 +17,7 @@ class TrainsTableSeeder extends Seeder
      */
     public function run(Faker $faker)
     {
-        for($i = 0; $i < 1000; $i++){
+        for($i = 0; $i < 10; $i++){
             $new_train = new Train();
             $new_train->company = $faker->company() ;
             $new_train->station_departure = $faker->city();
@@ -28,8 +28,8 @@ class TrainsTableSeeder extends Seeder
             $new_train->carriage_number = $faker->numberBetween(1, 20);
             $new_train->in_time = $faker->boolean();
             $new_train->cancelled = $faker->boolean();
-            $new_train->save();
-            // dump($new_train);
+            // $new_train->save();
+            dump($new_train);
 
         }
         /*
