@@ -30,7 +30,7 @@ return new class extends Migration
             $table->string('station_arrive',100);
             $table->dateTime('date_departure');
             $table->dateTime('date_arrive');
-            $table->smallInteger('train_code');
+            $table->int('train_code')->nullable();
             $table->smallInteger('carriage_number')->nullable();
             $table->boolean('in_time')->unsigned()->default(1);
             $table->boolean('cancelled')->unsigned()->default(1);
