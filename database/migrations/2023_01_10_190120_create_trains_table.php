@@ -25,15 +25,15 @@ return new class extends Migration
             // Numero Carrozze
             // In orario
             // Cancellato
-            $table->string('azienda',50);
-            $table->string('stazione_di_partenza',100);
-            $table->string('stazione_di_arrivo',100);
-            $table->dateTime('orario_di_partenza');
-            $table->dateTime('orario_di_arrivo');
-            $table->smallInteger('codice_treno');
-            $table->smallInteger('numero_carrozza')->nullable();
-            $table->boolean('in_orario')->unsigned()->default(1);
-            $table->boolean('cancellato')->unsigned()->default(1);
+            $table->string('company',50);
+            $table->string('station_departure',100);
+            $table->string('station_arrive',100);
+            $table->dateTime('date_departure');
+            $table->dateTime('date_arrive');
+            $table->smallInteger('train_code');
+            $table->smallInteger('carriage_number')->nullable();
+            $table->boolean('in_time')->unsigned()->default(1);
+            $table->boolean('cancelled')->unsigned()->default(1);
             $table->timestamps();
         });
     }
@@ -48,3 +48,4 @@ return new class extends Migration
         Schema::dropIfExists('train');
     }
 };
+
