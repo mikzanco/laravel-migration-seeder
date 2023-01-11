@@ -24,6 +24,7 @@ class TrainsTableSeeder extends Seeder
             $new_train->station_arrive = $faker->city();
             $new_train->date_departure = $faker->dateTime();
             $new_train->date_arrive = $faker->dateTime();
+            // usando bothify mi genera un codice di n numeri pari al numero di # inseriti successivamente
             $new_train->train_code = $faker->bothify('#####');
             $new_train->carriage_number = $faker->numberBetween(1, 20);
             $new_train->in_time = $faker->boolean();
